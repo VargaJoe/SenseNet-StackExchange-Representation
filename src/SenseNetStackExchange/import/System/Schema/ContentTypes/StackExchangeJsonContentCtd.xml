@@ -1,0 +1,143 @@
+﻿<ContentType name="StackExchangeJsonContent" parentType="File" handler="SenseNet.StackExchange.ContentHandler.StackExchangeJsonContent" xmlns="http://schemas.sensenet.com/SenseNet/ContentRepository/ContentTypeDefinition">
+  <DisplayName>StackExchange Json Content</DisplayName>
+  <Description></Description>
+  <Icon>Application</Icon>
+  <Fields>
+    <Field name="Hidden" type="Boolean">
+      <DisplayName>Rejtett</DisplayName>
+      <Description>Nem jelenik meg menuben.</Description>
+      <Configuration>
+        <VisibleBrowse>Show</VisibleBrowse>
+        <VisibleEdit>Show</VisibleEdit>
+        <VisibleNew>Show</VisibleNew>
+      </Configuration>
+    </Field>
+    <Field name="ApiPath" type="ShortText">
+      <DisplayName>CustomUrl</DisplayName>
+      <Configuration>
+        <VisibleBrowse>Show</VisibleBrowse>
+        <VisibleEdit>Show</VisibleEdit>
+        <VisibleNew>Show</VisibleNew>
+      </Configuration>
+    </Field>
+    <Field name="IsCacheable" type="Boolean">
+      <DisplayName>Cache</DisplayName>
+      <Configuration>
+        <VisibleBrowse>Show</VisibleBrowse>
+        <VisibleEdit>Show</VisibleEdit>
+        <VisibleNew>Show</VisibleNew>
+      </Configuration>
+    </Field>
+    <Field name="IsPersistable" type="Boolean">
+      <DisplayName>Binary perzisztáció</DisplayName>
+      <Configuration>
+        <VisibleBrowse>Show</VisibleBrowse>
+        <VisibleEdit>Show</VisibleEdit>
+        <VisibleNew>Show</VisibleNew>
+      </Configuration>
+    </Field>
+    <Field name="IsErrorRelevant" type="Boolean">
+      <DisplayName>Releváns Hiba</DisplayName>
+      <Configuration>
+        <VisibleBrowse>Show</VisibleBrowse>
+        <VisibleEdit>Show</VisibleEdit>
+        <VisibleNew>Show</VisibleNew>
+      </Configuration>
+    </Field>
+    <Field name="Binary" type="Binary">
+      <DisplayName>Binary</DisplayName>
+      <Description>The binary content of the document</Description>
+      <Configuration>
+        <VisibleBrowse>Show</VisibleBrowse>
+        <VisibleEdit>Show</VisibleEdit>
+        <VisibleNew>Show</VisibleNew>
+        <IsText>true</IsText>
+      </Configuration>
+    </Field>
+    <Field name="JsonUpdateInterval" type="Integer">
+      <DisplayName>UpdateInterval</DisplayName>
+      <Configuration>
+        <DateTimeMode>DateAndTime</DateTimeMode>
+        <VisibleBrowse>Show</VisibleBrowse>
+        <VisibleEdit>Show</VisibleEdit>
+        <VisibleNew>Show</VisibleNew>
+      </Configuration>
+    </Field>
+    <Field name="JsonLastUpdate" type="DateTime">
+      <DisplayName>LastUpdate</DisplayName>
+      <Configuration>
+        <DateTimeMode>DateAndTime</DateTimeMode>
+        <VisibleBrowse>Show</VisibleBrowse>
+        <VisibleEdit>Show</VisibleEdit>
+        <VisibleNew>Show</VisibleNew>
+      </Configuration>
+    </Field>
+    <Field name="JsonLastSyncDate" type="DateTime">
+      <DisplayName>LastSyncDate</DisplayName>
+      <Configuration>
+        <DateTimeMode>DateAndTime</DateTimeMode>
+        <VisibleBrowse>Show</VisibleBrowse>
+        <VisibleEdit>Show</VisibleEdit>
+        <VisibleNew>Show</VisibleNew>
+      </Configuration>
+    </Field>
+    <Field name="TechnicalUser" type="Reference">
+      <DisplayName>TechnicalUser</DisplayName>
+      <Configuration>
+        <AllowMultiple>false</AllowMultiple>
+        <SelectionRoot>
+          <Path>/Root/IMS</Path>
+        </SelectionRoot>
+        <VisibleBrowse>Show</VisibleBrowse>
+        <VisibleEdit>Show</VisibleEdit>
+        <VisibleNew>Show</VisibleNew>
+      </Configuration>
+    </Field>
+    <Field name="ResponseEncoding" type="ShortText">
+      <DisplayName>Response encoding</DisplayName>
+      <Description>
+        Sets the text encoding to use
+        Default value: UTF8
+      </Description>
+      <Icon>field.gif</Icon>
+      <Configuration>
+        <Compulsory>false</Compulsory>
+        <MaxLength>60</MaxLength>
+        <DefaultValue>utf-8</DefaultValue>
+        <VisibleBrowse>Advanced</VisibleBrowse>
+        <VisibleEdit>Advanced</VisibleEdit>
+        <VisibleNew>Advanced</VisibleNew>
+      </Configuration>
+    </Field>
+    <Field name="CacheControl" type="Choice">
+      <DisplayName>Cache-Control</DisplayName>
+      <Description>The response is generated with the selected Cache-control headers.</Description>
+      <Configuration>
+        <VisibleBrowse>Advanced</VisibleBrowse>
+        <VisibleEdit>Advanced</VisibleEdit>
+        <VisibleNew>Advanced</VisibleNew>
+        <AllowMultiple>false</AllowMultiple>
+        <AllowExtraValue>false</AllowExtraValue>
+        <Options>
+          <Option>Nondefined</Option>
+          <Option>NoCache</Option>
+          <Option>Private</Option>
+          <Option>Public</Option>
+          <Option>Server</Option>
+          <Option>ServerAndNoCache</Option>
+          <Option>ServerAndPrivate</Option>
+        </Options>
+        <DefaultValue>Nondefined</DefaultValue>
+      </Configuration>
+    </Field>
+    <Field name="MaxAge" type="ShortText">
+      <DisplayName>Max-age</DisplayName>
+      <Description>An integer value in seconds for Cache-control: maxage=x header to be sent out</Description>
+      <Configuration>
+        <VisibleBrowse>Advanced</VisibleBrowse>
+        <VisibleEdit>Advanced</VisibleEdit>
+        <VisibleNew>Advanced</VisibleNew>
+      </Configuration>
+    </Field>
+  </Fields>
+</ContentType>

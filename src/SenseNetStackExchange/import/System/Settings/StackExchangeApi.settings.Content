@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentMetaData>
+  <ContentType>Settings</ContentType>
+  <ContentName>StackExchangeApi.settings</ContentName>
+  <Fields>
+    <DisplayName><![CDATA[StackExchangeApi.settings]]></DisplayName>
+    <Index>0</Index>
+    <Binary attachment="StackExchangeApi.settings" />
+    <Hidden>false</Hidden>
+    <CreatedBy>
+      <Path>/Root/IMS/BuiltIn/Portal/Admin</Path>
+    </CreatedBy>
+    <CreationDate>2016-08-26T14:37:48.303</CreationDate>
+  </Fields>
+  <Permissions>
+    <Clear />
+  </Permissions>
+</ContentMetaData>
